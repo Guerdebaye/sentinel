@@ -1,0 +1,29 @@
+sentinel-app/
+├── src/
+│   ├── App.js
+│   ├── index.js
+│   ├── pages/
+│   │   ├── Dashboard.js
+│   │   ├── ThreatMap.js
+│   │   ├── CommunityDetection.js
+│   │   ├── FederatedLearning.js
+│   │   ├── NationalDashboard.js
+│   │   ├── PrivacyCenter.js
+│   │   ├── MobileApp.js
+│   │   ├── About.js
+│   │   └── Login.js
+│   ├── components/
+│   │   ├── Header.js
+│   │   ├── Sidebar.js
+│   │   ├── ThreatFeed.js
+│   │   ├── StatsCards.js
+│   │   ├── FLVisualization.js
+│   │   └── ProtectedRoute.js
+│   ├── contexts/
+│   │   └── AuthContext.js
+│   ├── services/
+│   │   ├── api.js
+│   │   └── mockData.js
+│   └── styles/
+│       └── global.css
+└── package.json

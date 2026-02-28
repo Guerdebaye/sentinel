@@ -1,13 +1,44 @@
-# Sentinel App
+# 🛡️ SENTINEL — L'Immunité Numérique Collective par IA Fédérée
 
-Une application web AI-Powered dédiée à la détection des menaces, l'intelligence sur les menaces et la protection des données.
+**Le système immunitaire d'internet pour l'Afrique**
 
-## 📋 Description
+## 🧠 Le Concept Core
 
-Sentinel App est une plateforme complète de cybersécurité offrant :
+SENTINEL est un réseau d'IA décentralisé et communautaire où chaque utilisateur devient un nœud de défense contre :
+- 🤖 Les **deepfakes** et la désinformation
+- 🚨 Les **cybermenaces** en temps réel
+- 🔓 L'**exploitation de données** personnelles
+
+**Spécificité révolutionnaire :** Quand un utilisateur à Dakar détecte un deepfake, le modèle IA s'améliore instantanément pour tous les utilisateurs en Afrique de l'Ouest — grâce au **Federated Learning** (apprentissage fédéré).
+
+**Le contrat central :** L'intelligence est collective. La vie privée est totale. Personne ne voit les données de personne.
+
+## ⚙️ Les 3 Couches Technologiques
+
+### 🔷 Couche 1 — Détection Communautaire
+Une **application mobile** où les citoyens "signalent" des contenus suspects.
+- L'IA analyse **localement sur le téléphone** (on-device AI)
+- Aucun contenu n'est envoyé vers un serveur centralisé
+- Chaque citoyen devient contributeur à la détection
+
+### 🔶 Couche 2 — Apprentissage Fédéré
+Les modèles IA collaborent sans jamais partager les données brutes.
+- Chaque appareil entraîne localement ses modèles
+- Seuls les **paramètres appris** sont partagés (pas les données)
+- Le modèle global devient plus intelligent à chaque signal
+- La sécurité et la confidentialité sont guaranties par architecture
+
+### 🔵 Couche 3 — Tableau de Bord Souverain
+Un dashboard national pour la gouvernance numérique.
+- **Visualisation en temps réel** des menaces numériques sur le territoire
+- Un **radar de cybersécurité nationale** pour la prise de décision
+- Insights souverains sans dépendance envers des tiers étrangers
+
+## 📋 Fonctionnalités Principales
+
 - **Détection de menaces en temps réel** via des modèles d'IA avancés
 - **Intelligence sur les menaces** avec flux de menaces actualisés
-- **Apprentissage fédéré** pour l'amélioration collaborative des modèles
+- **Apprentissage fédéré** pour l'amélioration collaborative des modèles sans partage de données
 - **Tableau de bord national** pour la surveillance au niveau du pays
 - **Centre de confidentialité** pour la gestion des données et de la vie privée
 - **Détection de communautés** pour identifier les clusters de menaces

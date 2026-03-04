@@ -135,6 +135,16 @@ L'application inclut un système d'authentification avec :
 - Page de connexion sécurisée
 - Routes protégées pour les utilisateurs autorisés
 
+### Identifiants de Connexion (Mode Démo)
+
+| Rôle | Identifiant | Mot de passe |
+|------|-------------|--------------|
+| **Administrateur** | `admin@sentinel.sn` | `admin123` |
+| **Analyste Sécurité** | `analyst@sentinel.sn` | `analyst123` |
+| **Citoyen** | `user@sentinel.sn` | `user123` |
+
+**Note :** Ces identifiants sont fournis à titre démonstratif. En production, utilisez un système d'authentification sécurisé (OAuth2, JWT, etc.)
+
 ## 📊 Fonctionnalités principales
 
 ### Tableau de bord

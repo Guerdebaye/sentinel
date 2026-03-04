@@ -3,51 +3,33 @@ import React from 'react';
 export default function About() {
   const team = [
     {
-      name: 'Dr. Amadou Diallo',
-      role: 'Fondateur & Directeur IA',
-      bio: 'Ancien chercheur en IA chez Google Brain, spécialiste en apprentissage fédéré',
+      name: 'M. ABIBOU Nokho',
+      role: 'Developpeur frontned',
+      bio: 'Etudiant en Reseau et Systeme à l\'Institut Superieur Informatique de Dakar, passionné par les technologies de l\'IA et la protection de la vie privée',
       country: '🇸🇳 Sénégal',
       image: '👨‍🔬'
     },
     {
-      name: 'Mariam Koné',
-      role: 'Directrice Cybersécurité',
-      bio: 'Experte en sécurité informatique, ancienne consultante pour l\'Union Africaine',
-      country: '🇨🇮 Côte d\'Ivoire',
+      name: 'GUERDEBAYE MOULEDJIM HYACINTHE',
+      role: 'Developpeur backend',
+      bio: 'Etudiant en Reseau et systeme à l\'Université de Ouagadougou, spécialisé en sécurité informatique et en apprentissage automatique',
+      country: '🇸🇳 Sénégal',
       image: '👩‍💻'
     },
     {
-      name: 'Ibrahim Traoré',
+      name: 'AMADOU DIAGNE DIAW',
       role: 'Lead Developer',
-      bio: 'Développeur full-stack, contributeur open source pour des projets de privacy',
-      country: '🇧🇫 Burkina Faso',
-      image: '👨‍💻'
-    },
-    {
-      name: 'Fatoumata Sy',
-      role: 'Responsable Partenariats',
-      bio: 'Experte en relations internationales et développement en Afrique',
+      bio: 'Développeur',
       country: '🇸🇳 Sénégal',
-      image: '👩‍💼'
-    },
+      image: '👨‍💻'
+    }
+   
   ];
 
-  const partners = [
-    { name: 'Union Africaine', logo: '🌍', type: 'Institutionnel' },
-    { name: 'Smart Africa', logo: '📡', type: 'Partenariat technique' },
-    { name: 'Orange Digital Center', logo: '📱', type: 'Innovation' },
-    { name: 'Google AI', logo: '🤖', type: 'Recherche' },
-    { name: 'Mozilla Foundation', logo: '🦊', type: 'Privacy' },
-    { name: 'UNESCO', logo: '📚', type: 'Éducation' },
-  ];
+ 
 
-  const timeline = [
-    { year: '2023 Q1', event: 'Lancement du projet Sentinel', status: '✅ Complété' },
-    { year: '2023 Q2', event: 'Premier prototype fonctionnel', status: '✅ Complété' },
-    { year: '2023 Q3', event: 'Test pilote au Sénégal (1000 utilisateurs)', status: '✅ Complété' },
-    { year: '2023 Q4', event: 'Déploiement en Afrique de l\'Ouest', status: '✅ Complété' },
-    { year: '2024 Q1', event: 'Lancement officiel', status: '🚀 En cours' },
-    { year: '2024 Q2', event: 'Expansion panafricaine', status: '📅 Planifié' },
+  /**/const timeline = [
+   
   ];
 
   return (
@@ -92,44 +74,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* Story Section */}
-      <div className="story-section">
-        <h2>Notre Histoire</h2>
-        <div className="story-content">
-          <div className="story-text">
-            <p>
-              Sentinel est né d'un constat alarmant : l'Afrique est devenue la cible privilégiée 
-              de campagnes de désinformation et de deepfakes, sans disposer d'outils de protection 
-              adaptés à son contexte.
-            </p>
-            <p>
-              En 2023, une équipe de chercheurs et d'ingénieurs africains s'est réunie avec une 
-              vision : créer un système de protection numérique qui respecte la souveraineté des 
-              données et la vie privée des utilisateurs, tout en étant suffisamment puissant pour 
-              faire face aux menaces modernes.
-            </p>
-            <p>
-              La solution ? L'apprentissage fédéré (federated learning), une technologie 
-              révolutionnaire qui permet d'entraîner des modèles d'IA sans jamais centraliser 
-              les données personnelles.
-            </p>
-          </div>
-          <div className="story-stats">
-            <div className="story-stat">
-              <span className="stat-value">10</span>
-              <span className="stat-label">Pays couverts</span>
-            </div>
-            <div className="story-stat">
-              <span className="stat-value">50K+</span>
-              <span className="stat-label">Utilisateurs</span>
-            </div>
-            <div className="story-stat">
-              <span className="stat-value">15K+</span>
-              <span className="stat-label">Menaces détectées</span>
-            </div>
-          </div>
-        </div>
-      </div>
+      
 
       {/* Timeline */}
       <div className="timeline-section">
@@ -150,7 +95,7 @@ export default function About() {
       {/* Team Section */}
       <div className="team-section">
         <h2>L'Équipe</h2>
-        <p className="section-subtitle">Des experts passionnés venus de toute l'Afrique</p>
+        <p className="section-subtitle">Des étudiants passionnés</p>
         <div className="team-grid">
           {team.map((member, index) => (
             <div key={index} className="team-card">
@@ -164,19 +109,7 @@ export default function About() {
         </div>
       </div>
 
-      {/* Partners Section */}
-      <div className="partners-section">
-        <h2>Ils nous soutiennent</h2>
-        <div className="partners-grid">
-          {partners.map((partner, index) => (
-            <div key={index} className="partner-card">
-              <span className="partner-logo">{partner.logo}</span>
-              <h4>{partner.name}</h4>
-              <span className="partner-type">{partner.type}</span>
-            </div>
-          ))}
-        </div>
-      </div>
+      
 
       {/* Values Section */}
       <div className="values-section">
@@ -190,7 +123,7 @@ export default function About() {
           <div className="value-item">
             <span className="value-icon">🤝</span>
             <h3>Communautaire</h3>
-            <p>Construit par et pour les communautés africaines</p>
+            <p>Construit par des étudiants africain et pour les communautés africaines</p>
           </div>
           <div className="value-item">
             <span className="value-icon">⚖️</span>
@@ -220,7 +153,7 @@ export default function About() {
             </div>
             <div className="contact-item">
               <span className="contact-icon">📍</span>
-              <span>Dakar, Sénégal · Abidjan, Côte d'Ivoire</span>
+              <span>Dakar, Sénégal</span>
             </div>
             <div className="contact-item">
               <span className="contact-icon">🐦</span>

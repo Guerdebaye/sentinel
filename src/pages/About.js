@@ -5,21 +5,21 @@ export default function About() {
     {
       name: 'M. ABIBOU Nokho',
       role: 'Developpeur frontned',
-      bio: 'Etudiant en Reseau et Systeme à l\'Institut Superieur Informatique de Dakar, passionné par les technologies de l\'IA et la protection de la vie privée',
+      bio: 'Etudiant en Reseau et Systeme à l\'Institut Superieur d\'Informatique de Dakar, passionné par les technologies de l\'IA et la protection de la vie privée',
       country: '🇸🇳 Sénégal',
       image: '👨‍🔬'
     },
     {
-      name: 'GUERDEBAYE MOULEDJIM HYACINTHE',
+      name: 'GUERDEBAYE MOULEDJIM Hyacinthe',
       role: 'Developpeur backend',
-      bio: 'Etudiant en Reseau et systeme à l\'Université de Ouagadougou, spécialisé en sécurité informatique et en apprentissage automatique',
+      bio: 'Etudiant en Reseau et systeme à l\'Institut Superieur d\'Informatique, spécialisé en sécurité informatique et en apprentissage automatique',
       country: '🇸🇳 Sénégal',
       image: '👩‍💻'
     },
     {
       name: 'AMADOU DIAGNE DIAW',
-      role: 'Lead Developer',
-      bio: 'Développeur',
+      role: 'Developpeur',
+      bio: 'Etudiant en Reseau et Systeme à l\'Institut Superieur d\'Informatique, passionné par la cybersécurité et les systèmes distribués',
       country: '🇸🇳 Sénégal',
       image: '👨‍💻'
     }

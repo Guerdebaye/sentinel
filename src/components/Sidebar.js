@@ -45,7 +45,7 @@ export default function Sidebar({ isOpen }) {
           <span>Réseau: 128 nœuds actifs</span>
         </div>
         <div className="version-info">
-          SENTINEL v2.4.0
+          SENTINEL v1.0.0
         </div>
       </div>
     </aside>

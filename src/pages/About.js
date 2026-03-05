@@ -11,7 +11,7 @@ export default function About() {
     },
     {
       name: 'GUERDEBAYE MOULEDJIM Hyacinthe',
-      role: 'Developpeur backend',
+      role: 'Developpeur frontend',
       bio: 'Etudiant en Reseau et systeme à l\'Institut Superieur d\'Informatique, spécialisé en sécurité informatique et en apprentissage automatique',
       country: '🇸🇳 Sénégal',
       image: '👩‍💻'

@@ -13,7 +13,9 @@ export default function CommunityDetection() {
     type: 'deepfake',
     description: '',
     location: '',
-    confidence: 70
+    confidence: 70,
+    fileLink: '',
+    uploadedFile: null
   });
 
   useEffect(() => {
@@ -50,7 +52,9 @@ export default function CommunityDetection() {
       type: 'deepfake',
       description: '',
       location: '',
-      confidence: 70
+      confidence: 70,
+      fileLink: '',
+      uploadedFile: null
     });
   };
 
@@ -121,6 +125,32 @@ export default function CommunityDetection() {
               placeholder="Ville, région..."
               className="form-control"
             />
+          </div>
+
+          <div className="form-group">
+            <label>Lien vers le contenu suspect</label>
+            <input
+              type="url"
+              value={newReport.fileLink}
+              onChange={(e) => setNewReport({...newReport, fileLink: e.target.value})}
+              placeholder="https://exemple.com/..."
+              className="form-control"
+            />
+          </div>
+
+          <div className="form-group">
+            <label>Téléverser un fichier ou une capture d'écran</label>
+            <input
+              type="file"
+              onChange={(e) => setNewReport({...newReport, uploadedFile: e.target.files[0]})}
+              className="form-control"
+              accept=".jpg,.jpeg,.png,.pdf,.mp4,.txt"
+            />
+            {newReport.uploadedFile && (
+              <small className="file-info">
+                📄 {newReport.uploadedFile.name} ({(newReport.uploadedFile.size / 1024).toFixed(2)} KB)
+              </small>
+            )}
           </div>
 
           <div className="form-group">

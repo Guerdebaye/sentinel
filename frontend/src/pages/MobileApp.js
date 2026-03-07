@@ -64,7 +64,7 @@ export default function MobileApp() {
       {/* Hero Section */}
       <div className="mobile-hero">
         <div className="hero-content">
-          <span className="hero-badge">📱 Disponible sur iOS & Android</span>
+          <span className="hero-badge">📱 Disponible sur iOS & Android (en cours de développement)</span>
           <h1 className="hero-title">Sentinel Mobile</h1>
           <p className="hero-subtitle">Votre garde du corps numérique,<br />directement dans votre poche</p>
           

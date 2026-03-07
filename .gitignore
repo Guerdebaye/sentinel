@@ -1,1 +1,162 @@
+# ===== Dependencies =====
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+lerna-debug.log*
+
+# ===== Environment Variables & Secrets =====
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+.env.*.example
+.env.*.template
+
+# ===== API Keys & Credentials =====
+.api_keys
+api_keys.js
+secrets/
+credentials/
+*.key
+*.pem
+*.p12
+*.pfx
+*.pub
+private_key*
+public_key*
+.private/
+
+# ===== Database =====
+*.db
+*.sqlite
+*.sqlite3
+*.mysql
+.db_backup/
+dump.rdb
+appendonly.aof
+
+# ===== Logs =====
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+lerna-debug.log*
+debug.log
+
+# ===== Build & Distribution =====
+build/
+dist/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.vuepress/dist/
+coverage/
+.tgz
+*.tgz
+
+# ===== IDE & Editor =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+.sublime-project
+.sublime-workspace
+*.code-workspace
+*.iml
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+.IntelliJIDEALTS
+.vscode-test/
+vscode.proposed.d.ts
+
+# ===== OS Files =====
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.AppleDouble
+.LSOverride
+
+# ===== Runtime Data =====
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ===== Testing =====
+.mocha
+.nyc_output/
+coverage/
+.jest/
+test-results/
+
+# ===== Docker =====
+docker-compose.override.yaml
+docker-compose.override.yml
+.docker/
+.dockerignore
+
+# ===== Uploads & Temporary Files =====
+backend/uploads/*
+!backend/uploads/.gitkeep
+tmp/
+temp/
+*.tmp
+
+# ===== SSL & Certificates =====
+ssl/*.crt
+ssl/*.key
+ssl/*.pem
+ssl/*.p8
+ssl/*.pfx
+ssl/*.p12
+ssl/*.cert
+!ssl/.gitkeep
+
+# ===== Node Processes =====
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# ===== Redis =====
+dump.rdb
+appendonly.aof
+
+# ===== Miscellaneous =====
+.env.*.local
+*.rar
+*.7z
+*.zip
+.local
+local_config.js
+*.bak
+.vscode/
+.history/
+
+# ===== Python (if applicable) =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+
+
+
+.deploy.sh
+deploy.sh
+deploy/

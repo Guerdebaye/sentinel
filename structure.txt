@@ -1,0 +1,81 @@
+sentinel-app/
+├── backend/
+│   ├── src/
+│   │   ├── controllers/
+│   │   │   ├── auth.controller.js
+│   │   │   ├── threats.controller.js
+│   │   │   ├── nodes.controller.js
+│   │   │   ├── community.controller.js
+│   │   │   ├── federated.controller.js
+│   │   │   └── stats.controller.js
+│   │   ├── models/
+│   │   │   ├── User.js
+│   │   │   ├── Threat.js
+│   │   │   ├── Node.js
+│   │   │   ├── Report.js
+│   │   │   ├── Alert.js
+│   │   │   ├── FederatedRound.js
+│   │   │   └── Associations.js
+│   │   ├── routes/
+│   │   │   ├── auth.routes.js
+│   │   │   ├── threats.routes.js
+│   │   │   ├── nodes.routes.js
+│   │   │   ├── community.routes.js
+│   │   │   ├── federated.routes.js
+│   │   │   └── stats.routes.js
+│   │   ├── middleware/
+│   │   │   ├── auth.js
+│   │   │   └── rateLimiter.js
+│   │   ├── services/
+│   │   │   ├── ai.service.js
+│   │   │   ├── notification.service.js
+│   │   │   └── federated.service.js
+│   │   ├── config/
+│   │   │   ├── database.js
+│   │   │   └── redis.js
+│   │   └── utils/
+│   │       └── logger.js
+│   ├── uploads/
+│   ├── models/
+│   ├── server.js
+│   ├── package.json
+│   └── Dockerfile
+│
+├── frontend/
+│   ├── public/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── Dashboard.js
+│   │   │   ├── ThreatMap.js
+│   │   │   ├── CommunityDetection.js
+│   │   │   ├── FederatedLearning.js
+│   │   │   ├── NationalDashboard.js
+│   │   │   ├── PrivacyCenter.js
+│   │   │   ├── MobileApp.js
+│   │   │   ├── About.js
+│   │   │   └── Login.js
+│   │   ├── components/
+│   │   │   ├── Header.js
+│   │   │   ├── Sidebar.js
+│   │   │   ├── ThreatFeed.js
+│   │   │   ├── StatsCards.js
+│   │   │   ├── FLVisualization.js
+│   │   │   ├── ProtectedRoute.js
+│   │   │   └── ThreatMap.js
+│   │   ├── contexts/
+│   │   │   └── AuthContext.js
+│   │   ├── services/
+│   │   │   ├── api.js
+│   │   │   └── mockData.js
+│   │   ├── styles/
+│   │   │   ├── global.css
+│   │   │   └── map.css
+│   │   ├── App.js ==
+│   │   └── index.js
+│   ├── package.json
+│   └── Dockerfile
+│
+├── docker-compose.yml
+├── .env
+├── deploy.sh
+└── nginx.conf

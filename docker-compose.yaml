@@ -1,0 +1,90 @@
+# version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: sentinel-db
+    environment:
+      POSTGRES_DB: sentinel_db
+      POSTGRES_USER: sentinel_admin
+      POSTGRES_PASSWORD: S3nt1n3l_2024!
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - sentinel-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sentinel_admin -d sentinel_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7-alpine
+    container_name: sentinel-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - sentinel-network
+
+  backend:
+    build: ./backend
+    container_name: sentinel-backend
+    environment:
+      NODE_ENV: production
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: sentinel_db
+      DB_USER: sentinel_admin
+      DB_PASSWORD: S3nt1n3l_2024!
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    ports:
+      - "5000:5000"
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./backend/uploads:/app/uploads
+      - ./backend/models:/app/models
+    networks:
+      - sentinel-network
+
+  frontend:
+    build: ./frontend
+    container_name: sentinel-frontend
+    environment:
+      REACT_APP_API_URL: http://localhost:5000
+      REACT_APP_MAPBOX_TOKEN: ${MAPBOX_TOKEN}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - sentinel-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: sentinel-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl:/etc/nginx/ssl
+    depends_on:
+      - frontend
+      - backend
+    networks:
+      - sentinel-network
+
+volumes:
+  postgres_data:
+  redis_data:
+
+networks:
+  sentinel-network:
+    driver: bridge

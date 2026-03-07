@@ -145,11 +145,13 @@ export default function About() {
           <div className="contact-info">
             <div className="contact-item">
               <span className="contact-icon">📧</span>
-              <span>contact@sentinel.africa</span>
+              <span>hyacintheguerde@gmail.com</span>
+              <span>abibounokho16@gmail.com</span>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📞</span>
-              <span>+221 33 123 45 67</span>
+              <span>+221 78 960 04 76</span>
+              <span>+221 77 476 67 37</span>
             </div>
             <div className="contact-item">
               <span className="contact-icon">📍</span>

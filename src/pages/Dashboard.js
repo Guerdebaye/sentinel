@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ThreatFeed from '../components/ThreatFeed';
 import StatsCards from '../components/StatsCards';
 import FLVisualization from '../components/FLVisualization';
@@ -12,6 +12,10 @@ export default function Dashboard() {
   const [scanning, setScanning] = useState(false);
   const [scanResult, setScanResult] = useState(null);
   const [tab, setTab] = useState('deepfake');
+  const [uploadedFile, setUploadedFile] = useState(null);
+  const [textContent, setTextContent] = useState('');
+  const [urlInput, setUrlInput] = useState('');
+  const fileInputRef = useRef(null);
 
   useEffect(() => {
     // Initial threats
@@ -32,6 +36,20 @@ export default function Dashboard() {
   }, []);
 
   const runScan = () => {
+    // Vérifier que du contenu a été fourni
+    if (tab === 'deepfake' && !uploadedFile) {
+      alert('Veuillez téléverser un fichier');
+      return;
+    }
+    if (tab === 'texte' && !textContent.trim()) {
+      alert('Veuillez entrer du texte à analyser');
+      return;
+    }
+    if (tab === 'url' && !urlInput.trim()) {
+      alert('Veuillez entrer une URL');
+      return;
+    }
+
     setScanning(true);
     setScanResult(null);
     
@@ -162,16 +180,67 @@ export default function Dashboard() {
             </div>
 
             <div className="detection-zone">
-              <div className={`upload-zone ${scanning ? 'scanning' : ''}`}>
+              <div 
+                className={`upload-zone ${scanning ? 'scanning' : ''}`}
+                onClick={() => tab === 'deepfake' && fileInputRef.current?.click()}
+                onDragOver={(e) => {
+                  e.preventDefault();
+                  e.currentTarget.style.backgroundColor = 'rgba(0,255,157,0.1)';
+                  e.currentTarget.style.cursor = 'pointer';
+                }}
+                onDragLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                }}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  if (tab === 'deepfake' && e.dataTransfer.files[0]) {
+                    setUploadedFile(e.dataTransfer.files[0]);
+                  }
+                }}
+                style={{ cursor: tab === 'deepfake' ? 'pointer' : 'default' }}
+              >
                 {scanning && <div className="scanning-line" />}
                 <div className="upload-icon">
                   {tab === 'deepfake' ? '🎬' : tab === 'texte' ? '📄' : '🔗'}
                 </div>
-                <div className="upload-text">
-                  {scanning
-                    ? "ANALYSE EN COURS..."
-                    : `Déposer ${tab === 'deepfake' ? 'une vidéo/image' : tab === 'texte' ? 'un texte' : 'une URL'} à analyser`}
-                </div>
+                
+                {tab === 'deepfake' && (
+                  <>
+                    <input
+                      ref={fileInputRef}
+                      type="file"
+                      accept="video/*,image/*"
+                      onChange={(e) => setUploadedFile(e.target.files[0])}
+                      style={{ display: 'none' }}
+                    />
+                    <div className="upload-text">
+                      {uploadedFile 
+                        ? `📁 ${uploadedFile.name}` 
+                        : 'Déposer une vidéo/image ou cliquer'}
+                    </div>
+                  </>
+                )}
+
+                {tab === 'texte' && (
+                  <textarea
+                    className="text-input"
+                    placeholder="Collez ou tapez le texte à analyser..."
+                    value={textContent}
+                    onChange={(e) => setTextContent(e.target.value)}
+                    rows="6"
+                  />
+                )}
+
+                {tab === 'url' && (
+                  <input
+                    type="url"
+                    className="url-input"
+                    placeholder="https://exemple.com/..."
+                    value={urlInput}
+                    onChange={(e) => setUrlInput(e.target.value)}
+                  />
+                )}
               </div>
               <button
                 className="analyze-btn"
